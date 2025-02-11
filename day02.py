@@ -1,16 +1,21 @@
 import math
-
+# v1.1) for -> while
+# v1.2) while 구문으로 구간 소수를 출력하는 프로그램을 작성
+# v1.3) ** 대신 pow 함수 사용하기
 def is_prime(num):
     """
     This function checks if a number is prime.
-    if a number is prime, it returns True.
+    If a number is prime, it returns True.
     """
-    if num >= 2:
-        for i in range(2, int(math.sqrt(num))+1):
-            if num % i == 0:
-                return False
-    else:
+    if num ==1 :
         return False
+
+    i = 2
+    while i <= int(math.sqrt(num)):
+        if num % i == 0:
+            return False
+        i += 1
+
     return True
 
 
