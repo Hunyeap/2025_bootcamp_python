@@ -7,11 +7,11 @@ def is_prime(num):
     This function checks if a number is prime.
     If a number is prime, it returns True.
     """
-    if num ==1 :
+    if num == 1:
         return False
 
     i = 2
-    while i <= int(math.sqrt(num)):
+    while i <= int(math.pow(num, 0.5)):  # ** 대신 pow 함수 사용
         if num % i == 0:
             return False
         i += 1
