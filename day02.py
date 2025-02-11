@@ -3,7 +3,7 @@ import math
 # v1.2) while 구문으로 구간 소수를 출력하는 프로그램을 작성
 # v1.3) ** 대신 pow 함수 사용하기
 # v1.4) pow 대신 함수 만들어 사용하기
-def my_pow(a):
+def my_sqrt(a):
     epsilon = 1e-10
     guess = a
     while abs(guess * guess - a) > epsilon:
@@ -20,7 +20,7 @@ def is_prime(num):
         return False
 
     i = 2
-    while i <= int(my_pow(num)):
+    while i <= int(my_sqrt(num)):
         if num % i == 0:
             return False
         i += 1
