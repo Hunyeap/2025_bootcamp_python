@@ -19,9 +19,15 @@ def is_prime(num):
     return True
 
 
-n = int(input("input n: "))
+numbers = input("input n: ").split()
+n1 = int(numbers[0])
+n2 = int(numbers[1])
 
-if is_prime(n):
-    print(f"{n} is a prime number")
-else:
-    print(f"{n} is not a prime number")
+if n1 > n2:
+    n1, n2 = n2, n1
+
+current = n1
+while current <= n2:
+    if is_prime(current):
+        print(current, end=" ")  # 한 줄에 출력
+    current += 1
