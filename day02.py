@@ -3,13 +3,25 @@ import math
 # v1.2) while 구문으로 구간 소수를 출력하는 프로그램을 작성
 # v1.3) ** 대신 pow 함수 사용하기
 # v1.4) pow 대신 함수 만들어 사용하기
-def my_sqrt(a):
+def my_sqrt(a) -> float:
     epsilon = 1e-10
     guess = a
     while abs(guess * guess - a) > epsilon:
         guess = 0.5 * (guess + a / guess)  # 뉴턴-랩슨 공식 적용
 
     return guess
+
+
+# def my_pow(a, b) -> float:
+#     """
+#     This function returns a^b
+#     :param a: base number
+#     :param b: exponent
+#     """
+#     result = 1
+#     for k in range(b):
+#         result *= a
+
 
 def is_prime(num):
     """
