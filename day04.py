@@ -47,5 +47,6 @@ while True:
 
 for k in range(len(drinks)):
     if amounts[k] != 0:
-        print(f"주류명 : {drinks[k]} 수량 : {amounts[k]} 단가 : {prices[k]}  소계 : {prices[k] * amounts[k]}")
+        print(f"주류명 : {drinks[k]}\n 수량 : {amounts[k]:>2} "
+              f"단가 : {prices[k]:>6}  소계 : {prices[k] * amounts[k]:>5}")
 print(f"총 금액 : {total_price}원")
