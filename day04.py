@@ -14,7 +14,7 @@ def log_decorator(func):
 
 @log_decorator
 def greet(name, greeting = "안녕하세요", age = 0):
-    return f"{greeting}, {name}"
+    return f"{greeting}, {name}(age: {age}" if age else f"{greeting}, {name}"
 
 
 print(greet("인하"))
